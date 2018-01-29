@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-
+    if params[:name] == ''
+      redirect_to '/login'
+    end
   end
 end
