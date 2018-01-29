@@ -4,11 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-    if session[:name].nil?
-      render html: "<a href='/login'>Login</a>".html_safe
-    else
-      name = session[:name]
-      render html: "hi, #{name}<br><a href='/logout'>Logout</a>".html_safe
-    end
+    
   end
 end
